@@ -396,6 +396,7 @@ var BasicComposer = Widget.extend({
         this._preprocessMessage().then(function (message) {
             self.trigger('post_message', message);
             self._clearComposerOnSend();
+            self.$(".o_composer_button_send").prop("disabled", false);
             self.$input.focus();
         });
     },
